@@ -17,10 +17,10 @@ public class Game {
         int curser =0;
 
         for (int frame=0 ; frame <10 ; frame ++){
-            if (isaSpare(rolls[curser])){
+            if (isaStrike(rolls[curser])){
                 score += 10 + rolls [curser+1] + rolls [curser+2];
                 curser +=1;
-            }else if (isaStrike(curser)){
+            }else if (isaSpare(curser)){
                 score += 10 + rolls [curser+2];
                 curser +=2;
 
@@ -34,11 +34,11 @@ public class Game {
         return score;
     }
 
-    private boolean isaSpare(int roll) {
+    private boolean isaStrike(int roll) {
         return roll ==10;
     }
 
-    private boolean isaStrike(int curser) {
+    private boolean isaSpare(int curser) {
         return rolls[curser] + rolls [curser+1] == 10;
     }
 }

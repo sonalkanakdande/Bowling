@@ -30,13 +30,13 @@ public class BowlingTest {
     }
 
     @Test
-    public void canScoreSpareFollowedByThree(){
+    public void canScoreStrikeFollowedByThreeAndTwo (){
         game.roll(5,5, 3,0 , 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0);
         assertThat(game.score(), is(16));
     }
 
     @Test
-    public void canScoreStrikeFollowedByThreeAndTwo(){
+    public void canScoreSpareFollowedByThree(){
         game.roll(10,5, 3,0 , 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0);
         assertThat(game.score(), is(26));
     }
