@@ -1,3 +1,5 @@
+package bowling.game;
+
 import bowling.Game;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,13 +18,13 @@ public class BowlingTest {
     }
 
     @Test
-    public void test_GutterGame() {
+    public void gutterGame() {
         game.roll(0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0);
         assertThat(game.score(), is(0));
     }
 
     @Test
-    public void test_CanScoreOnes() {
+    public void canScoreOnes() {
         game.roll(1,1, 1,1, 1,1 ,1,1 ,1,1, 1,1 ,1,1, 1,1, 1,1 ,1,1);
         assertThat(game.score(), is(20));
     }
